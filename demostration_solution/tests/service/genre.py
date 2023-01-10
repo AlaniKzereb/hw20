@@ -30,8 +30,8 @@ class TestGenreService:
 
     def test_get_one(self):
         genre = self.genre_service.get_one(1)
-        assert genre != None
-        assert genre.id != None
+        assert genre is not None
+        assert genre.id is not None
 
     def test_get_all(self):
         genres = self.genre_service.get_all()
@@ -43,7 +43,7 @@ class TestGenreService:
             "name": "Ival",
         }
         genre = self.genre_service.create(genre_d)
-        assert genre.id != None
+        assert genre.id is not None
 
     def test_delete(self):
         self.genre_service.delete(1)

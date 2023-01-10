@@ -43,7 +43,7 @@ class TestDirectorService:
             "name": "Ivan",
         }
         director = self.director_service.create(director_d)
-        assert director.id != None
+        assert director.id is not None
 
     def test_delete(self):
         self.director_service.delete(1)
